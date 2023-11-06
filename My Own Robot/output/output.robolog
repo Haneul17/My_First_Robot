@@ -1,0 +1,615 @@
+V 0.0.4
+T 2023-11-06T00:38:08.897+00:00
+ID 1|c1f45261-7c3c-11ee-a8a8-90324b404d84
+I "sys.platform=win32"
+I "python=3.10.12 | packaged by conda-forge | (main, Jun 23 2023, 22:34:57) [MSC v.1936 64 bit (AMD64)]"
+M a:"tasks.py"
+SR a|0.008
+M c:"Collect tasks"
+M d:"setup"
+M e:""
+P b:c|d|e|e|0
+ST b|0.008
+M f:"regular"
+M g:"\nCollecting tasks from: tasks.py\n"
+C f|g|0.008
+M h:"stderr"
+M i:"2023-11-06 01:38:14,800 - RPA.core.certificates - INFO - Truststore injection done, using system certificate store to validate HTTPS.\n"
+C h|i|5.904
+M j:"PASS"
+ET j|e|12.616
+M l:"order_robots_from_RobotSpareBin"
+M m:"tasks"
+M n:"c:\\Users\\Izaya\\dev\\Automation\\My Own Robot\\tasks.py"
+M o:null
+P k:l|m|n|o|10
+ST k|12.616
+M p:"=================== "
+C f|p|12.617
+M q:"Running: "
+C f|q|12.617
+M r:"task_name"
+C r|l|12.617
+M s:" ===================\n"
+C f|s|12.617
+M t:"METHOD"
+SE k|t|12.617
+M v:"configure"
+M w:"robocorp.browser"
+M x:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\robocorp\\browser\\__init__.py"
+P u:v|w|x|e|18
+SE u|t|12.617
+M y:"kwargs"
+M z:"dict"
+M A:"{'slowmo': 100}"
+EA y|z|A
+EE t|j|12.624
+M C:"open_robot_order_website"
+P B:C|m|n|e|19
+SE B|t|12.624
+M E:"goto"
+P D:E|w|x|e|205
+SE D|t|12.624
+M F:"url"
+M G:"str"
+M H:"'https://robotsparebinindustries.com/#/robot-order'"
+EA F|G|H
+M I:"Playwright browsers path: C:\\Users\\Izaya\\AppData\\Local\\robocorp\\playwright)"
+M K:"playwright"
+M L:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\robocorp\\browser\\_context.py"
+P J:K|w|L|e|64
+L D|I|J|64|12.634
+P M:E|w|x|e|218
+M N:"Page"
+M O:"<Page url='https://robotsparebinindustries.com/#/robot-order'>"
+R M|N|O|16.084
+EE t|j|16.085
+EE t|j|16.085
+M Q:"get_orders"
+P P:Q|m|n|e|23
+SE P|t|16.085
+M S:"HTTP.__init__"
+M T:"RPA.HTTP"
+M U:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\RPA\\HTTP.py"
+P R:S|T|U|e|91
+SE R|t|16.085
+M V:"args"
+M W:"tuple"
+M X:"()"
+EA V|W|X
+M Y:"{}"
+EA y|z|Y
+EE t|j|16.085
+P Z:Q|m|n|e|24
+M 0:"http"
+M 1:"HTTP"
+M 2:"<RPA.HTTP.HTTP object at 0x00000215A0FDC220>"
+AS Z|0|1|2|16.085
+M 4:"HTTP.download"
+P 3:4|T|U|e|188
+SE 3|t|16.086
+M 5:"'https://robotsparebinindustries.com/orders.csv'"
+EA F|G|5
+M 6:"target_file"
+M 7:"NoneType"
+M 8:"None"
+EA 6|7|8
+M 9:"verify"
+M aa:"bool"
+M ab:"True"
+EA 9|aa|ab
+M ac:"force_new_session"
+M ad:"False"
+EA ac|aa|ad
+M ae:"overwrite"
+EA ae|aa|ab
+M af:"stream"
+EA af|aa|ad
+EA y|z|Y
+P ag:4|T|U|e|260
+M ah:"Response"
+M ai:"<Response [200]>"
+R ag|ah|ai|16.624
+EE t|j|16.624
+M ak:"Tables.__init__"
+M al:"RPA.Tables"
+M am:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\RPA\\Tables.py"
+P aj:ak|al|am|e|989
+SE aj|t|16.624
+EE t|j|16.624
+P an:Q|m|n|e|27
+M ao:"library"
+M ap:"Tables"
+M aq:"<RPA.Tables.Tables object at 0x00000215A0FDCAF0>"
+AS an|ao|ap|aq|16.624
+M as:"Tables.read_table_from_csv"
+P ar:as|al|am|e|1856
+SE ar|t|16.625
+M at:"path"
+M au:"'orders.csv'"
+EA at|G|au
+M av:"header"
+EA av|7|8
+M aw:"columns"
+M ax:"list"
+M ay:"['Order Number', 'Head', 'Body', 'Legs', 'Adress']"
+EA aw|ax|ay
+M az:"dialect"
+EA az|7|8
+M aA:"delimiters"
+EA aA|7|8
+M aB:"column_unknown"
+M aC:"'Unknown'"
+EA aB|G|aC
+M aD:"encoding"
+EA aD|7|8
+P aE:as|al|am|e|1940
+M aF:"Table"
+M aG:"Table(columns=['Order Number', 'Head', 'Body', 'Legs', 'Adress'], rows=20)"
+R aE|aF|aG|16.63
+EE t|j|16.63
+P aH:Q|m|n|e|28
+M aI:"orders"
+AS aH|aI|aF|aG|16.63
+M aK:"Tables.group_table_by_column"
+P aJ:aK|al|am|e|1667
+SE aJ|t|16.63
+M aL:"table"
+EA aL|aF|aG
+M aM:"column"
+M aN:"'Order Number'"
+EA aM|G|aN
+P aO:aK|al|am|e|1690
+M aP:"[Table(columns=['Order Number', 'Head', 'Body', 'Legs', 'Adress'], rows=20)]"
+R aO|ax|aP|16.632
+EE t|j|16.632
+P aQ:Q|m|n|e|32
+M aR:"customers"
+AS aQ|aR|ax|aP|16.632
+M aT:"for order in orders"
+P aS:aT|m|n|e|34
+M aU:"FOR"
+SE aS|aU|16.632
+M aW:"Table.iter_dicts"
+P aV:aW|al|am|e|827
+M aX:"UNTRACKED_GENERATOR"
+SE aV|aX|16.632
+M aY:"with_index"
+EA aY|aa|ad
+M a0:"Step: for order in orders"
+P aZ:a0|m|n|e|34
+M a1:"FOR_STEP"
+SE aZ|a1|16.633
+M a2:"order"
+M a3:"{'Order Number': None, 'Head': '1', 'Body': '2', 'Legs': '3', 'Adress': None}"
+EA a2|z|a3
+M a5:"fill_the_form"
+P a4:a5|m|n|e|42
+SE a4|t|16.633
+M a6:"order_data"
+EA a6|z|a3
+M a8:"page"
+P a7:a8|w|x|e|108
+SE a7|t|16.633
+P a9:a8|w|x|e|127
+R a9|N|O|16.633
+EE t|j|16.633
+P ba:a5|m|n|e|43
+AS ba|a8|N|O|16.633
+M bc:"Page.select_option"
+M bd:"playwright.sync_api._generated"
+M be:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\sync_api\\_generated.py"
+P bb:bc|bd|be|e|11328
+SE bb|t|16.634
+M bf:"selector"
+M bg:"'#head'"
+EA bf|G|bg
+M bh:"value"
+M bi:"'1'"
+EA bh|G|bi
+P bj:bc|bd|be|e|11410
+M bk:"['1']"
+R bj|ax|bk|16.788
+EE t|j|16.788
+SE bb|t|16.789
+M bl:"'#id-body'"
+EA bf|G|bl
+M bm:"'2'"
+EA bh|G|bm
+M bn:"Error: Page closed\n=========================== logs ===========================\nwaiting for locator(\"#id-body\")\n============================================================"
+STB bn|26.032
+M bo:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\robocorp\\tasks\\_task.py"
+M bp:"run"
+M bq:"self.method()"
+TBE bo|30|bp|bq
+M br:"self"
+M bs:"Task"
+M bt:"Task(order_robots_from_RobotSpareBin, status: NOT_RUN)"
+TBV br|bs|bt
+M bu:"orders = get_orders()"
+TBE n|15|l|bu
+M bv:"fill_the_form(order)"
+TBE n|35|Q|bv
+TBV 0|1|2
+TBV ao|ap|aq
+TBV aI|aF|aG
+TBV aR|ax|aP
+TBV a2|z|a3
+M bw:"page.select_option(\"#id-body\", order_data[\"Body\"])"
+TBE n|46|a5|bw
+TBV a6|z|a3
+TBV a8|N|O
+M bx:"select_option"
+M by:"self._sync("
+TBE be|11411|bx|by
+TBV br|N|O
+TBV bf|G|bl
+TBV bh|G|bm
+M bz:"index"
+TBV bz|7|8
+M bA:"label"
+TBV bA|7|8
+M bB:"element"
+TBV bB|7|8
+M bC:"timeout"
+TBV bC|7|8
+M bD:"no_wait_after"
+TBV bD|7|8
+M bE:"force"
+TBV bE|7|8
+M bF:"strict"
+TBV bF|7|8
+M bG:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_sync_base.py"
+M bH:"_sync"
+M bI:"return task.result()"
+TBE bG|109|bH|bI
+TBV br|N|O
+M bJ:"coro"
+M bK:"coroutine"
+M bL:"<coroutine object Page.select_option at 0x00000215AA277D10>"
+TBV bJ|bK|bL
+M bM:"__tracebackhide__"
+TBV bM|aa|ab
+M bN:"task"
+M bO:"<Task finished name='Task-9' coro=<Page.select_option() done, defined at C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_page.py:857> exception=Error('Page closed\\n=========================== logs ===========================\\nwaiting for locator(\"#id-body\")\\n============================================================')>"
+TBV bN|bs|bO
+M bP:"g_self"
+M bQ:"greenlet"
+M bR:"<greenlet.greenlet object at 0x00000215A3F6A040 (otid=0x00000215A1BD7D80) current active started main>"
+TBV bP|bQ|bR
+M bS:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_page.py"
+M bT:"return await self._main_frame.select_option(**params)"
+TBE bS|870|bx|bT
+TBV br|N|O
+TBV bf|G|bl
+TBV bh|G|bm
+TBV bz|7|8
+TBV bA|7|8
+TBV bB|7|8
+TBV bC|7|8
+M bU:"noWaitAfter"
+TBV bU|7|8
+TBV bE|7|8
+TBV bF|7|8
+M bV:"params"
+M bW:"{'selector': '#id-body', 'value': '2'}"
+TBV bV|z|bW
+M bX:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_frame.py"
+M bY:"return await self._channel.send(\"selectOption\", params)"
+TBE bX|674|bx|bY
+M bZ:"Frame"
+M b0:"<Frame name= url='https://robotsparebinindustries.com/#/robot-order'>"
+TBV br|bZ|b0
+TBV bf|G|bl
+TBV bh|G|bm
+TBV bz|7|8
+TBV bA|7|8
+TBV bB|7|8
+TBV bC|7|8
+TBV bU|7|8
+TBV bF|7|8
+TBV bE|7|8
+M b1:"{'selector': '#id-body', 'options': [{'valueOrLabel': '2'}]}"
+TBV bV|z|b1
+M b2:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_connection.py"
+M b3:"send"
+M b4:"return await self._connection.wrap_api_call("
+TBE b2|61|b3|b4
+M b5:"method"
+M b6:"'selectOption'"
+TBV b5|G|b6
+TBV bV|z|b1
+M b7:"Channel"
+M b8:"<playwright._impl._connection.Channel object at 0x00000215A55D1240>"
+TBV br|b7|b8
+M b9:"wrap_api_call"
+M ca:"return await cb()"
+TBE b2|490|b9|ca
+M cb:"Connection"
+M cc:"<playwright._impl._connection.Connection object at 0x00000215A0FDD2D0>"
+TBV br|cb|cc
+M cd:"cb"
+M ce:"function"
+M cf:"<function Channel.send.<locals>.<lambda> at 0x00000215AA7395A0>"
+TBV cd|ce|cf
+M cg:"is_internal"
+TBV cg|aa|ad
+TBV bN|bs|bO
+M ch:"st"
+M ci:"[FrameInfo(frame=<frame at 0x00000215A484B780, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\playwright\\\\_impl\\\\_sync_base.py', line 109, code _sync>, filename='C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\playwright\\\\_impl\\\\_sync_base.py', lineno=102, function='_sync', code_context=['        setattr(task, \"__pw_stack__\", inspect.stack())\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A47E7400, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\playwright\\\\sync_api\\\\_generated.py', line 11410, code select_option>, filename='C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\playwright\\\\sync_api\\\\_generated.py', lineno=11411, function='select_option', code_context=['            self._sync(\\n'], index=0), FrameInfo(frame=<frame at 0x00000215AA2B5590, file 'c:\\\\Users\\\\Izaya\\\\dev\\\\Automation\\\\My Own Robot\\\\tasks.py', line 46, code fill_the_form>, filename='c:\\\\Users\\\\Izaya\\\\dev\\\\Automation\\\\My Own Robot\\\\tasks.py', lineno=46, function='fill_the_form', code_context=['    page.select_option(\"#id-body\", order_data[\"Body\"])\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A523E500, file 'c:\\\\Users\\\\Izaya\\\\dev\\\\Automation\\\\My Own Robot\\\\tasks.py', line 35, code get_orders>, filename='c:\\\\Users\\\\Izaya\\\\dev\\\\Automation\\\\My Own Robot\\\\tasks.py', lineno=35, function='get_orders', code_context=['        fill_the_form(order)\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A9E64950, file 'c:\\\\Users\\\\Izaya\\\\dev\\\\Automation\\\\My Own Robot\\\\tasks.py', line 15, code order_robots_from_RobotSpareBin>, filename='c:\\\\Users\\\\Izaya\\\\dev\\\\Automation\\\\My Own Robot\\\\tasks.py', lineno=15, function='order_robots_from_RobotSpareBin', code_context=['    orders = get_orders()\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A9FD0840, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_task.py', line 30, code run>, filename='C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_task.py', lineno=30, function='run', code_context=['        self.method()\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A13DD400, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_commands.py', line 278, code run>, filename='C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_commands.py', lineno=278, function='run', code_context=['                        task.run()\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A1BDB870, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_argdispatch.py', line 20, code _dispatch>, filename='C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_argdispatch.py', lineno=20, function='_dispatch', code_context=['        return method(**dct)\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A1ADC440, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_argdispatch.py', line 159, code process_args>, filename='C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_argdispatch.py', lineno=159, function='process_args', code_context=['        return self._dispatch(parsed)\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A1AC89A0, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\cli.py', line 33, code main>, filename='C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\cli.py', lineno=33, function='main', code_context=['    returncode = _arg_dispatch.process_args(args)\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A149C840, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\__main__.py', line 4, code <module>>, filename='C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\__main__.py', lineno=4, function='<module>', code_context=['    main()\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A09C7D40, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\runpy.py', line 86, code _run_code>, filename='C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\runpy.py', lineno=86, function='_run_code', code_context=['    exec(code, run_globals)\\n'], index=0), FrameInfo(frame=<frame at 0x00000215A0E5A040, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\runpy.py', line 196, code _run_module_as_main>, filename='C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\runpy.py', lineno=196, function='_run_module_as_main', code_context=['    return _run_code(code, main_globals, None,\\n'], index=0)]"
+TBV ch|ax|ci
+M cj:"inner_send"
+M ck:"result = next(iter(done)).result()"
+TBE b2|99|cj|ck
+TBV br|b7|b8
+TBV b5|G|b6
+TBV bV|z|b1
+M cl:"return_as_dict"
+TBV cl|aa|ad
+M cm:"callback"
+M cn:"ProtocolCallback"
+M co:"<playwright._impl._connection.ProtocolCallback object at 0x00000215A55EF970>"
+TBV cm|cn|co
+M cp:"done"
+M cq:"set"
+M cr:"{<Future finished exception=Error('Page closed\\n=========================== logs ===========================\\nwaiting for locator(\"#id-body\")\\n============================================================')>}"
+TBV cp|cq|cr
+M cs:"_"
+M ct:"{<Future pending>}"
+TBV cs|cq|ct
+ETB 26.035
+M cu:"ERROR"
+EE t|cu|26.037
+EE t|cu|26.037
+M cv:"GeneratorExit: "
+STB cv|26.037
+TBE bo|30|bp|bq
+TBV br|bs|bt
+TBE n|15|l|bu
+TBE n|35|Q|bv
+TBV 0|1|2
+TBV ao|ap|aq
+TBV aI|aF|aG
+TBV aR|ax|aP
+TBV a2|z|a3
+M cw:"iter_dicts"
+M cx:"yield row"
+TBE am|833|cw|cx
+TBV br|aF|aG
+TBV aY|aa|ad
+M cy:"int"
+M cz:"0"
+TBV bz|cy|cz
+M cA:"row"
+TBV cA|z|a3
+M cB:"'Adress'"
+TBV aM|G|cB
+ETB 26.039
+EE aX|j|26.039
+EE a1|cu|26.039
+EE aU|cu|26.039
+EE t|cu|26.039
+EE t|cu|26.039
+C r|l|26.052
+M cC:" status: "
+C f|cC|26.053
+M cD:"error"
+M cE:"FAIL\n"
+C cD|cE|26.053
+M cF:"\nPage closed\n=========================== logs ===========================\nwaiting for locator(\"#id-body\")\n============================================================\n"
+C cD|cF|26.053
+M cG:"=========== "
+C f|cG|26.053
+M cH:"Full Traceback (running "
+C f|cH|26.053
+C r|l|26.054
+M cI:")"
+C f|cI|26.054
+M cJ:" ===========\n"
+C f|cJ|26.054
+M cK:"traceback"
+M cL:"Traceback (most recent call last):\n  File \"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\robocorp\\tasks\\_commands.py\", line 278, in run\n    task.run()\n  File \"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\robocorp\\tasks\\_task.py\", line 30, in run\n    self.method()\n  File \"c:\\Users\\Izaya\\dev\\Automation\\My Own Robot\\tasks.py\", line 15, in order_robots_from_RobotSpareBin\n    orders = get_orders()\n  File \"c:\\Users\\Izaya\\dev\\Automation\\My Own Robot\\tasks.py\", line 35, in get_orders\n    fill_the_form(order)\n  File \"c:\\Users\\Izaya\\dev\\Automation\\My Own Robot\\tasks.py\", line 46, in fill_the_form\n    page.select_option(\"#id-body\", order_data[\"Body\"])\n  File \"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\sync_api\\_generated.py\", line 11411, in select_option\n    self._sync(\n  File \"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_sync_base.py\", line 109, in _sync\n    return task.result()\n  File \"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_page.py\", line 870, in select_option\n    return await self._main_frame.select_option(**params)\n  File \"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_frame.py\", line 674, in select_option\n    return await self._channel.send(\"selectOption\", params)\n  File \"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_connection.py\", line 61, in send\n    return await self._connection.wrap_api_call(\n  File \"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_connection.py\", line 490, in wrap_api_call\n    return await cb()\n  File \"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\playwright\\_impl\\_connection.py\", line 99, in inner_send\n    result = next(iter(done)).result()\nplaywright._impl._api_types.Error: Page closed\n=========================== logs ===========================\nwaiting for locator(\"#id-body\")\n============================================================\n\n"
+C cK|cL|26.055
+M cM:"================================================================================\n"
+C f|cM|26.055
+M cN:"FAIL"
+M cO:"Page closed\n=========================== logs ===========================\nwaiting for locator(\"#id-body\")\n============================================================"
+ET cN|cO|26.056
+M cQ:"Teardown tasks"
+M cR:"teardown"
+P cP:cQ|cR|e|e|0
+ST cP|26.056
+M cS:"Process snapshot"
+SPS cS|26.232
+M cT:"System information:\nMemory: Total: 31.9 G, Available: 19.7 G, Used: 38.3 %\nCPUs: 6"
+P cU:e|e|e|e|0
+L I|cT|cU|0|26.452
+M cV:"Current Process: python.exe (pid: 31748, status: running)\nCommand Line: C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\python.exe -m robocorp.tasks run tasks.py\nStarted: 01:38:08\nParent pid: 37832\nResident Set Size: 128.5 M\nVirtual Memory Size: 112.9 M"
+L I|cV|cU|0|26.488
+M cW:"OutputToPortThread|Thread ID: 24540 (daemon)"
+STD cW|26.488
+M cX:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\threading.py"
+M cY:"_bootstrap"
+M cZ:"self._bootstrap_inner()"
+TBE cX|973|cY|cZ
+M c0:"Thread"
+M c1:"<Thread(OutputToPortThread, started daemon 24540)>"
+TBV br|c0|c1
+M c2:"_bootstrap_inner"
+M c3:"self.run()"
+TBE cX|1016|c2|c3
+TBV br|c0|c1
+M c4:"self._target(*self._args, **self._kwargs)"
+TBE cX|953|bp|c4
+TBV br|c0|c1
+M c5:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\robocorp\\tasks\\_log_output_setup.py"
+M c6:"write_in_thread"
+M c7:"msg = q.get()"
+TBE c5|73|c6|c7
+M c8:"msg"
+M c9:"'ST cP|26.048\\n'"
+TBV c8|G|c9
+M da:"client_socket"
+M db:"socket"
+M dc:"<socket.socket fd=480, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55052), raddr=('127.0.0.1', 53730)>"
+TBV da|db|dc
+M dd:"log"
+M de:"module"
+M df:"<module 'robocorp.log' from 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\__init__.py'>"
+TBV dd|de|df
+M dg:"port_in_env"
+M dh:"'53730'"
+TBV dg|G|dh
+M di:"q"
+M dj:"Queue"
+M dk:"<queue.Queue object at 0x00000215A1C3E1A0>"
+TBV di|dj|dk
+M dl:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\queue.py"
+M dm:"get"
+M dn:"self.not_empty.wait()"
+TBE dl|171|dm|dn
+TBV br|dj|dk
+M do:"block"
+TBV do|aa|ab
+TBV bC|7|8
+M dp:"wait"
+M dq:"waiter.acquire()"
+TBE cX|320|dp|dq
+M dr:"Condition"
+M ds:"<Condition(<unlocked _thread.lock object at 0x00000215A256D5C0>, 1)>"
+TBV br|dr|ds
+TBV bC|7|8
+M dt:"waiter"
+M du:"lock"
+M dv:"<locked _thread.lock object at 0x00000215A8B8E580>"
+TBV dt|du|dv
+M dw:"saved_state"
+TBV dw|7|8
+M dx:"gotit"
+TBV dx|aa|ad
+ETD 26.49
+M dy:"MainThread|Thread ID: 10620 (non daemon)"
+STD dy|26.49
+M dz:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\robocorp\\log\\__init__.py"
+M dA:"process_snapshot"
+M dB:"robo_logger.process_snapshot()"
+TBE dz|270|dA|dB
+M dC:"logger_instances"
+M dD:"{<robocorp.log._robo_logger._RoboLogger object at 0x00000215A15605E0>: 1, <robocorp.log._robo_logger._RoboLogger object at 0x00000215A1C3DF60>: 1}"
+TBV dC|z|dD
+M dE:"robo_logger"
+M dF:"_RoboLogger"
+M dG:"<robocorp.log._robo_logger._RoboLogger object at 0x00000215A15605E0>"
+TBV dE|dF|dG
+M dH:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\robocorp\\log\\_robo_logger.py"
+M dI:"new_func"
+M dJ:"return func(self, *args, **kwargs)"
+TBE dH|20|dI|dJ
+TBV br|dF|dG
+TBV V|W|X
+TBV y|z|Y
+M dK:"func"
+M dL:"<function _RoboLogger.process_snapshot at 0x00000215A3FB8CA0>"
+TBV dK|ce|dL
+M dM:"return self._robot_output_impl.process_snapshot(hide_vars)"
+TBE dH|416|dA|dM
+TBV br|dF|dG
+M dN:"hide_vars"
+TBV dN|aa|ad
+M dO:"C:\\ProgramData\\robocorp\\ht\\f9ec127_b1f3c24_691db988\\lib\\site-packages\\robocorp\\log\\_robo_output_impl.py"
+M dP:"self._dump_threads(hide_vars)"
+TBE dO|738|dA|dP
+TBV dN|aa|ad
+TBV dd|de|df
+M dQ:"entry_id"
+M dR:"'ps_2'"
+TBV dQ|G|dR
+M dS:"entry_type"
+M dT:"'process_snapshot'"
+TBV dS|G|dT
+M dU:"psutil"
+M dV:"<module 'psutil' from 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\psutil\\\\__init__.py'>"
+TBV dU|de|dV
+M dW:"AccessDenied"
+M dX:"type"
+M dY:"<class 'psutil.AccessDenied'>"
+TBV dW|dX|dY
+M dZ:"NoSuchProcess"
+M d0:"<class 'psutil.NoSuchProcess'>"
+TBV dZ|dX|d0
+M d1:"ZombieProcess"
+M d2:"<class 'psutil.ZombieProcess'>"
+TBV d1|dX|d2
+M d3:"curr_process"
+M d4:"Process"
+M d5:"psutil.Process(pid=31748, name='python.exe', status='running', started='01:38:08')"
+TBV d3|d4|d5
+M d6:"log_info"
+M d7:"<function _RoboOutputImpl.process_snapshot.<locals>.log_info at 0x00000215AA0BF130>"
+TBV d6|ce|d7
+M d8:"memory_info"
+M d9:"'Total: 31.9 G, Available: 19.7 G, Used: 38.3 %'"
+TBV d8|G|d9
+M ea:"child_i"
+TBV ea|cy|cz
+M eb:"child"
+TBV eb|d4|d5
+M ec:"name"
+M ed:"'python.exe'"
+TBV ec|G|ed
+M ee:"status"
+M ef:"'running'"
+TBV ee|G|ef
+M eg:"create_time"
+M eh:"'01:38:08'"
+TBV eg|G|eh
+M ei:"ppid"
+M ej:"'37832'"
+TBV ei|G|ej
+M ek:"cmdline"
+M el:"'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\python.exe -m robocorp.tasks run tasks.py'"
+TBV ek|G|el
+M em:"rss"
+M en:"'128.5 M'"
+TBV em|G|en
+M eo:"vms"
+M ep:"'112.9 M'"
+TBV eo|G|ep
+M eq:"proc_memory_info"
+M er:"pmem"
+M es:"pmem(rss=134770688, vms=118423552, num_page_faults=132798, peak_wset=135417856, wset=134770688, peak_paged_pool=229496, paged_pool=229320, peak_nonpaged_pool=55064, nonpaged_pool=38160, pagefile=118423552, peak_pagefile=119021568, private=118423552)"
+TBV eq|er|es
+M et:"message"
+M eu:"'Current Process: python.exe (pid: 31748, status: running)\\nCommand Line: C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\python.exe -m robocorp.tasks run tasks.py\\nStarted: 01:38:08\\nParent pid: 37832\\nResident Set Size: 128.5 M\\nVirtual Memory Size: 112.9 M'"
+TBV et|G|eu
+M ev:"_RoboOutputImpl"
+M ew:"<robocorp.log._robo_output_impl._RoboOutputImpl object at 0x00000215A14893C0>"
+TBV br|ev|ew
+M ex:"_dump_threads"
+M ey:"stack.append((f, f.f_lineno))"
+TBE dO|759|ex|ey
+TBV br|ev|ew
+TBV dN|aa|ad
+M ez:"thread_id"
+M eA:"10620"
+TBV ez|cy|eA
+M eB:"frame"
+M eC:"<frame at 0x00000215AA634E40, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 763, code _dump_threads>"
+TBV eB|eB|eC
+M eD:"thread"
+M eE:"_MainThread"
+M eF:"<_MainThread(MainThread, started 10620)>"
+TBV eD|eE|eF
+M eG:"title"
+M eH:"'MainThread|Thread ID: 10620 (non daemon)'"
+TBV eG|G|eH
+M eI:"f"
+M eJ:"<frame at 0x00000215A13DD400, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_commands.py', line 312, code run>"
+TBV eI|eB|eJ
+M eK:"stack"
+M eL:"[(<frame at 0x00000215AA5AC780, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\__init__.py', line 270, code process_snapshot>, 270), (<frame at 0x00000215A40C0240, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_logger.py', line 20, code new_func>, 20), (<frame at 0x00000215AA33B920, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_logger.py', line 416, code process_snapshot>, 416), (<frame at 0x00000215A23D6190, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 738, code process_snapshot>, 738), (<frame at 0x00000215AA634E40, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\f9ec127_b1f3c24_691db988\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 763, code _dump_threads>, 759)]"
+TBV eK|ax|eL
+ETD 26.513
+EPS 26.513
+ET j|e|26.573
+ER cu|26.573
